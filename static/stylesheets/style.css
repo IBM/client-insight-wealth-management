@@ -1,0 +1,176 @@
+/*
+ * Copyright 2015 IBM Corp. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the “License”);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an “AS IS” BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* style.css
+ * This file provides css styles.
+ */
+
+body {
+	background-color: #f4f4f4;
+}
+
+.choose-customer {
+	padding: 1rem;
+	padding-left: 2rem;
+}
+
+.choose-customer-title {
+	display: inline;
+	margin-right: 45px;
+}
+
+.select-customer-id {
+	font-family: system-ui;
+	font-size: 13px;
+}
+
+.retrieve-customer {
+	margin-left: 45px;
+	font-size: 13px;
+	background-color: #152a36;
+	border: black;
+	color: white;
+	padding: 0.5rem;
+}
+
+.s-picture-profile-tile {
+	display: inline;
+	padding: 1.6rem;
+}
+
+.customer-id-title {
+	margin-bottom: 1.6rem;
+}
+
+.s-editable-personal-information-tile {
+	display: inline;
+	margin-bottom: 0rem;
+}
+
+.s-editable-personal-information-info {
+	text-align: left;
+}
+
+.s-donut-title-chart-tile-title {
+    margin-bottom: 1.2rem;
+}
+
+
+.fixedDataTableCellLayout_main {
+    border-right-style: none;
+}
+
+.s-items {
+	background: #f4f4f4;
+}
+
+
+/* Loader
+-------------------------
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #ffffff;
+  border-radius: 50%;
+  border-top: 16px solid #152a36;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+/********************************/
+.react-tabs [role=tablist] {
+	border-bottom: 1px solid #aaa;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.react-tabs [role=tab] {
+	display: inline-block;
+	border: 1px solid transparent;
+	border-bottom: none;
+	bottom: -1px;
+	position: relative;
+	list-style: none;
+	padding: 6px 12px;
+	cursor: pointer;
+}
+
+.react-tabs [role=tab][aria-selected=true] {
+	background: #fff;
+	border-color: #aaa;
+	color: black;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+}
+
+.react-tabs [role=tab][aria-disabled=true] {
+	color: GrayText;
+	cursor: default;
+}
+
+.react-tabs [role=tab]:focus {
+	box-shadow: 0 0 5px hsl(208, 99%, 50%);
+	border-color: hsl(208, 99%, 50%);
+	outline: none;
+}
+
+.react-tabs [role=tab]:focus:after {
+	content: "";
+	position: absolute;
+	height: 5px;
+	left: -4px;
+	right: -4px;
+	bottom: -5px;
+	background: #fff;
+}

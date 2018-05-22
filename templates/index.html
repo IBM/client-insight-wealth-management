@@ -1,0 +1,328 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Client Insights for Wealth Management</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/app.bundle.css') }}" >
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+</head>
+<body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0;visibility:hidden">
+    <defs>
+      <symbol xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139">
+        <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2630_">
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4651_" points="32,11 26.7,11 27,10 32,10  "></polygon>
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4650_" points="17.8,10 22.7,10 23.1,11 17.8,11  "></polygon>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4649_" d="M13.9,10c0.8,0.1,1.5,0.4,2.1,0.9c0,0-9,0-9,0C7,11,7,10,7,10L13.9,10z"></path>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4646_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4648_" x="0" y="10" width="6.2" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4647_" d="M3.1,10.5"></path>
+          </g>
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4645_" points="32,12.7 26.1,12.7 26.4,11.8 32,11.8  "></polygon>
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4644_" points="23.7,12.7 17.8,12.7 17.8,11.8 23.4,11.8  "></polygon>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4643_" d="M16.7,11.8c0.1,0.3,0.3,0.6,0.3,0.9H7v-0.9H16.7z"></path>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4640_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4642_" x="0" y="11.8" width="6.2" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4641_" d="M3.1,12.2"></path>
+          </g>
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4638_" points="25.5,14.4 25.8,13.5 30.2,13.5 30.2,14.4  "></polygon>
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4637_" points="24,13.5 24.3,14.4 19.6,14.4 19.6,13.5  "></polygon>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4636_" d="M17,13.5c0,0.3,0,0.6-0.1,0.9h-2.7v-0.9H17z"></path>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4633_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4635_" x="1.7" y="13.5" width="2.7" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4634_" d="M3.1,13.9"></path>
+          </g>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4629_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4632_" x="8.8" y="13.5" width="2.7" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4630_" d="M10.2,13.9"></path>
+          </g>
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4626_" points="22.2,15.4 22.2,16.1 19.6,16.1 19.6,15.2 24.6,15.2 24.9,16 25.2,15.2 30.2,15.2 30.2,16.1    27.6,16.1 27.6,15.4 27.4,16.1 22.4,16.1  "></polygon>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4625_" d="M8.8,15.2h7.7v0c-0.2,0.3-0.5,0.7-0.8,0.9c0,0-6.9,0-6.9,0C8.8,16.1,8.8,15.2,8.8,15.2z"></path>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4622_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4624_" x="1.7" y="15.2" width="2.7" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4623_" d="M3.1,15.6"></path>
+          </g>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4619_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4621_" x="27.6" y="16.9" width="2.6" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4620_" d="M28.9,17.4"></path>
+          </g>
+          <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4618_" x="19.6" y="16.9" width="2.6" height="0.9"></rect>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4615_" d="M27.1,16.9c0,0-0.3,0.9-0.3,0.9l-3.7,0c0,0-0.3-0.9-0.3-0.9H27.1z"></path>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4614_" d="M8.8,16.9h6.9c0.3,0.3,0.6,0.6,0.8,0.9c0,0-7.7,0-7.7,0S8.8,16.9,8.8,16.9z"></path>
+          <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4611_" x="1.7" y="16.9" width="2.7" height="0.9"></rect>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4606_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4610_" x="27.6" y="18.6" width="2.6" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4607_" d="M28.9,19.1"></path>
+          </g>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4602_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4604_" x="19.6" y="18.6" width="2.6" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4603_" d="M20.9,19.1"></path>
+          </g>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4601_" d="M26.2,19.5c0,0,0.3-0.9,0.3-0.9h-3.2c0,0,0.3,0.9,0.3,0.9S26.2,19.5,26.2,19.5z"></path>
+          <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4600_" x="8.8" y="18.6" width="2.7" height="0.9"></rect>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4599_" d="M16.9,18.6c0.1,0.3,0.1,0.6,0.2,0.9h-2.9v-0.9H16.9z"></path>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4596_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4598_" x="1.7" y="18.6" width="2.7" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4597_" d="M3.1,19.1"></path>
+          </g>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4593_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4595_" x="27.6" y="20.3" width="4.4" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4594_" d="M29.8,20.8"></path>
+          </g>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2643_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_4592_" x="17.8" y="20.3" width="4.4" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2644_" d="M20,20.8"></path>
+          </g>
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2642_" points="25.6,21.2 24.2,21.2 23.9,20.3 25.9,20.3  "></polygon>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2641_" d="M0,20.3v0.9h6.2c0,0,0-0.9,0-0.9S0,20.3,0,20.3z"></path>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2640_" d="M17,20.3c-0.1,0.3-0.1,0.7-0.3,0.9l-0.1,0H7v-0.9H17z"></path>
+          <polygon id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2639_" points="25,22.9 24.8,22.9 24.5,22 25.3,22  "></polygon>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2636_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2638_" x="27.6" y="22" width="4.4" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2637_" d="M29.8,22.5"></path>
+          </g>
+          <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2635_" d="M7,22.9V22c0,0,9,0,9,0c-0.6,0.6-1.4,0.9-2.3,0.9L7,22.9"></path>
+          <g id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2632_">
+            <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2634_" x="17.8" y="22" width="4.4" height="0.9"></rect>
+            <path id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2633_" d="M20,22.5"></path>
+          </g>
+          <rect id="IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139_XMLID_2631_" x="0" y="22" width="6.2" height="0.9"></rect>
+        </g>
+      </symbol>
+      <symbol viewBox="0 0 32 32" id="confirm_32_4a183b8ba3cf613a68eaa6eac3ff57dc">
+        <path d="M14 18.586l-3.293-3.293-1.414 1.414L14 21.414l8.707-8.707-1.414-1.414"></path>
+        <path d="M16 2C8.27 2 2 8.27 2 16s6.27 14 14 14 14-6.27 14-14S23.73 2 16 2zm0 26C9.383 28 4 22.617 4 16S9.383 4 16 4s12 5.383 12 12-5.383 12-12 12z"></path>
+      </symbol>
+    </defs>
+    </svg>
+
+
+  <div class="s-header-container" data-reactid=".0.0">
+    <div class="s-header-brand-and-primary-links" data-reactid=".0.0.0">
+      <div class="s-brand-text" data-reactid=".0.0.0.0"><span class="s-header-prefix" data-reactid=".0.0.0.0.1"><span data-reactid=".0.0.0.0.1.0">Wealth</span></span><span data-reactid=".0.0.0.0.2">Insight</span></div>
+
+    </div>
+    <div class="s-header-secondary-nav" data-reactid=".0.0.1">
+
+
+      <div tabindex="0" data-reactid=".0.0.1.2"><svg class="s-header-secondary-nav-bookmark" width="1.6rem" height="1.6rem" stroke-width="0.1rem" aria-labelledby="title" data-reactid=".0.0.1.2.0"><title data-reactid=".0.0.1.2.0.0"></title><use xlink:href="#bookmark_32_706025104d153caf26fba19f51b77565" data-reactid=".0.0.1.2.0.1"></use></svg></div>
+      <div class="s-header-secondary-nav-bookmark-splitter" data-reactid=".0.0.1.3"></div>
+      <div data-reactid=".0.0.1.4"><svg class="s-header-secondary-nav-company" width="3.2rem" height="3.2rem" stroke-width="0.2rem" aria-labelledby="title" data-reactid=".0.0.1.4.0"><title data-reactid=".0.0.1.4.0.0"></title><use xlink:href="#IBMLogo_12bd2b76c76cdfe63bf1fdf112e9c139" data-reactid=".0.0.1.4.0.1"></use></svg></div>
+    </div>
+  </div>
+
+    <div class="choose-customer">
+        <h2 class="choose-customer-title">Choose Customer ID</h2>
+        <select class="select-customer-id">
+            <option disabled="" selected="" value="disabled">Loading...</option>
+        </select>
+        <button class="retrieve-customer">View Client Profile</button>
+    </div>
+
+
+    <div class="loader" id="loader" style="display:none;"></div>
+
+
+
+    <div class="s-app-body" data-reactid=".0.1">
+      <div data-reactid=".0.1.2"><noscript data-reactid=".0.1.2.0"></noscript><noscript data-reactid=".0.1.2.1"></noscript>
+        <div class="" data-reactid=".0.1.2.2">
+
+          <div class="row" data-reactid=".0.1.2.2.0">
+            <div class="col-xs-12" data-reactid=".0.1.2.2.0.0">
+              <div class="s-profile-container" data-reactid=".0.1.2.2.0.0.0">
+                <div class="s-picture-profile-tile" data-reactid=".0.1.2.2.0.0.0.0">
+
+                  <div data-reactid=".0.1.2.2.0.0.0.0.1">
+
+                    <div class="s-picture-profile-tile-name s-small-header customer-id-title" data-reactid=".0.1.2.2.0.0.0.0.1.0">Customer Id</div>
+                    <div class="s-picture-profile-tile-name s-title-header customer-id" data-reactid=".0.1.2.2.0.0.0.0.1.0"></div>
+                  </div>
+
+                </div>
+
+                <div class="s-editable-personal-information-tile" data-reactid=".0.1.2.2.0.0.0.1">
+                  <div class="s-editable-personal-information-title" data-reactid=".0.1.2.2.0.0.0.1.0">
+                    <div class="s-editable-personal-information-title-text s-small-header" data-reactid=".0.1.2.2.0.0.0.1.0.0">Location</div>
+                  </div>
+                  <div class="s-editable-personal-information-info s-small-body geographic-area-home" data-reactid=".0.1.2.2.0.0.0.1.1"></div>
+                </div>
+
+                <div class="s-donut-title-chart-tile" data-reactid=".0.1.2.2.0.0.0.2">
+                  <div class="s-donut-title-chart-tile-title s-small-header" data-reactid=".0.1.2.2.0.0.0.2.0">Status</div>
+                  <div class="s-donut-title-chart-tile-content s-small-body status" data-reactid=".0.1.2.2.0.0.0.2.1">Current status:</div>
+                  <div class="s-donut-title-chart-tile-content s-small-body relationship-start-date" data-reactid=".0.1.2.2.0.0.0.2.1">Client Since:</div>
+                  <div class="s-donut-title-chart-tile-content s-small-body effective-date" data-reactid=".0.1.2.2.0.0.0.2.1">Last Update:</div>
+                  <div class="s-donut-title-chart-tile-content s-small-body advertising-indicator" data-reactid=".0.1.2.2.0.0.0.2.1">Marketing Opt In:</div>
+                </div>
+
+
+                <div class="s-comments-tile" data-reactid=".0.1.2.2.0.0.0.3">
+                  <div data-reactid=".0.1.2.2.0.0.0.3.0">
+                    <div class="s-comments-tile-title s-small-header" data-reactid=".0.1.2.2.0.0.0.3.0.0">Addition Information</div>
+                    <div class="s-comments-tile-content s-small-body head-of-household-indicator" data-reactid=".0.1.2.2.0.0.0.3.0.2" id="head-of-household-indicator" style="display:none;">Head of Household</div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+
+          <div class="row" data-reactid=".0.1.2.2.1">
+            <div class="col-xs-12" data-reactid=".0.1.2.2.1.0">
+              <div class="s-tabbed-sections" data-reactid=".0.1.2.2.1.0.0">
+                <div class="ReactTabs react-tabs" data-reactid=".0.1.2.2.1.0.0.0">
+                  <ul class="ReactTabs__TabList s-big-body" role="tablist" data-reactid=".0.1.2.2.1.0.0.0.$/=10">
+                    <li class="ReactTabs__Tab ReactTabs__Tab--selected" role="tab" id="react-tabs-0" aria-selected="true" aria-expanded="true" aria-disabled="false" aria-controls="react-tabs-1" data-reactid=".0.1.2.2.1.0.0.0.$/=10.$0/=1$0" tabindex="0" selected="selected"><span data-reactid=".0.1.2.2.1.0.0.0.$/=10.$0/=1$0.0">Insights</span></li>
+                  </ul>
+
+
+
+                  <div class="ReactTabs__TabPanel ReactTabs__TabPanel--selected" role="tabpanel" id="react-tabs-1" aria-labelledby="react-tabs-0" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0">
+                    <div class="row" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0">
+                      <div class="col-md-8 col-xs-12" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0">
+                        <div class="s-life-events s-insights-tile s-tile-padding" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0">
+                          <div class="s-section-header" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.0"><span class="s-title-header" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.0.0"><span data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.0.0.0">Life Events</span></span>
+                          </div>
+
+                          <div class="s-buttongroup s-life-events-buttongroup" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.1">
+                            <div tabindex="0" class="s-button s-button-radiogroup s-button-small s-buttongroup-button is-selected" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.1.$detected"><span class="s-button-text" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.1.$detected.1"><span data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.1.$detected.1.0">Predicted Events</span></span>
+                            </div>
+
+                          </div>
+                          <div class="s-table-borderless" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2">
+                            <div class="fixedDataTableLayout_main public_fixedDataTable_main" style="height:152px;width:1196px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0">
+                              <div class="fixedDataTableLayout_rowsContainer" style="height:150px;width:1196px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0">
+                                <div class="fixedDataTableColumnResizerLineLayout_main fixedDataTableColumnResizerLineLayout_hiddenElem public_fixedDataTableColumnResizerLine_main" style="width:0;height:152px;left:0;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.0">
+                                  <div class="fixedDataTableColumnResizerLineLayout_mouseArea" style="height:152px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.0.0"></div>
+                                </div>
+                                <div style="width:1196px;height:50px;z-index:1;transform:translate3d(0px,0px,0);backface-visibility:hidden;" class="fixedDataTableRowLayout_rowWrapper" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header">
+                                  <div class="fixedDataTableRowLayout_main public_fixedDataTableRow_main fixedDataTableLayout_header public_fixedDataTable_header" style="width:1196px;height:50px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0">
+                                    <div class="fixedDataTableRowLayout_body" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0">
+                                      <div style="height:50px;left:0;" class="fixedDataTableCellGroupLayout_cellGroupWrapper" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells">
+                                        <div class="fixedDataTableCellGroupLayout_cellGroup" style="height:50px;position:absolute;width:1120px;z-index:2;transform:translate3d(0px,0px,0);backface-visibility:hidden;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0">
+                                          <div class="fixedDataTableCellLayout_main public_fixedDataTableCell_main" style="height:50px;width:160px;left:0;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_0">
+                                            <div class="fixedDataTableCellLayout_wrap1 public_fixedDataTableCell_wrap1 s-table-header" style="height:50px;width:160px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_0.1">
+                                              <div class="fixedDataTableCellLayout_wrap2 public_fixedDataTableCell_wrap2" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_0.1.0">
+                                                <div class="fixedDataTableCellLayout_wrap3 public_fixedDataTableCell_wrap3" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_0.1.0.0">
+                                                  <div class="public_fixedDataTableCell_cellContent" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_0.1.0.0.0"><span data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_0.1.0.0.0.0">Effective Date</span></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="fixedDataTableCellLayout_main public_fixedDataTableCell_main" style="height:50px;width:260px;left:160px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_1">
+                                            <div class="fixedDataTableCellLayout_wrap1 public_fixedDataTableCell_wrap1 s-table-header" style="height:50px;width:260px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_1.1">
+                                              <div class="fixedDataTableCellLayout_wrap2 public_fixedDataTableCell_wrap2" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_1.1.0">
+                                                <div class="fixedDataTableCellLayout_wrap3 public_fixedDataTableCell_wrap3" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_1.1.0.0">
+                                                  <div class="public_fixedDataTableCell_cellContent" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_1.1.0.0.0"><span data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_1.1.0.0.0.0">Event</span></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="fixedDataTableCellLayout_main public_fixedDataTableCell_main" style="height:50px;width:600px;left:420px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_2">
+                                            <div class="fixedDataTableCellLayout_wrap1 public_fixedDataTableCell_wrap1 s-table-header" style="height:50px;width:600px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_2.1">
+                                              <div class="fixedDataTableCellLayout_wrap2 public_fixedDataTableCell_wrap2" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_2.1.0">
+                                                <div class="fixedDataTableCellLayout_wrap3 public_fixedDataTableCell_wrap3" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_2.1.0.0">
+                                                  <div class="public_fixedDataTableCell_cellContent" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_2.1.0.0.0">
+                                                    <span data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$fixed_cells.0.$cell_2.1.0.0.0.0">Score Value</span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div style="height:50px;left:1120px;" class="fixedDataTableCellGroupLayout_cellGroupWrapper" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$scrollable_cells">
+                                        <div class="fixedDataTableCellGroupLayout_cellGroup" style="height:50px;position:absolute;width:0;z-index:0;transform:translate3d(0px,0px,0);backface-visibility:hidden;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.$scrollable_cells.0"></div>
+                                      </div>
+                                      <div class="fixedDataTableRowLayout_fixedColumnsDivider public_fixedDataTableRow_fixedColumnsDivider" style="left:1120px;height:50px;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.$header.0.0.2"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div style="position:absolute;pointer-events:auto;transform:translate3d(0px,50px,0);backface-visibility:hidden;" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.0.0.2.0.0.3">
+
+
+                                  <div class="life-events"></div>
+
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    <div class="col-md-4 col-xs-12" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1">
+                      <div class="s-insights-modules-container s-clients-block" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0">
+                        <div class="s-insights-attrition-level-container" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0">
+                          <div class="s-list-container s-tile-padding" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0">
+                            <div class="s-list-container-item s-title-header s-list-title-container" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.0"><span data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.0.1">Attrition Level</span></div>
+                            <ul class="s-items s-scroll" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4">
+                              <li class="s-li s-small-body" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0">
+                                <div tabindex="0" class="s-li-content" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2">
+
+
+                                  <div class="attrition-score"></div>
+
+
+                                  <div class="s-li-body" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1">
+                                    <div class="s-li-text" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1"><span class="s-small-header" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.0">Features</span>
+                                      <ul class="s-li-description-list" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2">
+
+                                        <li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0"></li>
+
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="s-li-tail" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.2"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="s-clients-block" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.2">
+                        <div class="s-list-container s-tile-padding" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.2.0">
+
+                          <div class="segment-header"></div>
+
+
+                          <ul class="s-items s-scroll" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.2.0.4">
+
+                            <div class="segments"></div>
+
+
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ReactTabs__TabPanel" role="tabpanel" id="react-tabs-3" aria-labelledby="react-tabs-2" style="display:none;" data-reactid=".0.1.2.2.1.0.0.0.$1/=11=2$1"></div>
+                <div class="ReactTabs__TabPanel" role="tabpanel" id="react-tabs-5" aria-labelledby="react-tabs-4" style="display:none;" data-reactid=".0.1.2.2.1.0.0.0.$2/=11=2$2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='scripts/load.js') }}"></script>

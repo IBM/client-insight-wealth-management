@@ -1,0 +1,7 @@
+applications:
+- path: .
+  name: client-insights
+  memory: 128M
+  random-route: true
+  instances: 1
+  buildpack: python_buildpack
