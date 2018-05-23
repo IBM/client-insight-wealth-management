@@ -1,0 +1,12 @@
+{
+  "CUSTOMER_AGE_RANGE_index": "Age Range Index",
+  "CUSTOMER_NUMBER_OF_DEPENDENT_CHILDREN": "Number of Dependent Children",
+  "CUSTOMER_SUMMARY_NUMBER_OF_ACTIVE_ACCOUNTS": "Number of Active Accounts",
+  "CUSTOMER_SUMMARY_TOTAL_NUMBER_OF_BUY_TRADES": "Total Number of Buy Trades",
+  "CUSTOMER_SUMMARY_TOTAL_NUMBER_OF_SELL_TRADES": "Total Number of Sell Trades",
+  "CUSTOMER_EDUCATION_LEVEL_index": "Education Level Index",
+  "CUSTOMER_EMPLOYMENT_STATUS_index": "Employment Status Index",
+  "CUSTOMER_GENDER_index": "Gender Index",
+  "CUSTOMER_MARITAL_STATUS_index": "Marital Status Index"
+
+}

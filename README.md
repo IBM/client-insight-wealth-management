@@ -1,10 +1,10 @@
 # Client Insight for Wealth Management
 
-In this code pattern, we will explore the Client Insigts for Wealth Management service.  This service provides a set of analytical models that help you obtain client insights for retaining clients and providing greater service. It is specifically designed to support wealth management companies and their clients. You can segment your clients based on their behavior, determine attrition propensity, and enhance client engagement and increasing retention.
+In this code pattern, we will explore the Client Insight for Wealth Management service.  This service provides a set of analytical models that help you obtain client insights for retaining clients and providing greater service. It is specifically designed to support wealth management companies and their clients. You can segment your clients based on their behavior, determine attrition propensity, and enhance client engagement and increasing retention.
 
 When the reader has completed this code pattern, they will understand how to:
 
-* Retrieve client insight through the Client Insigts for Wealth Management (CIWM) service
+* Retrieve client insight through the Client Insight for Wealth Management (CIWM) service
 * Walk through Notebook to understand use of the service
 * Create a web application with a dashboard to display client insights
 
@@ -13,7 +13,7 @@ When the reader has completed this code pattern, they will understand how to:
 
 
 ## Included Components
-+ [Client Insights for Wealth Management](https://console.bluemix.net/docs/services/client_insight_wealth/index.html#getting_started_client_insight_wealth_short)
++ [Client Insight for Wealth Management](https://console.bluemix.net/docs/services/client_insight_wealth/index.html#getting_started_client_insight_wealth_short)
 
 ## Featured technologies
 + [Jupyter Notebook](http://jupyter.org/)
@@ -31,11 +31,11 @@ When the reader has completed this code pattern, they will understand how to:
 
 ## 1. Clone the repo
 
-Clone the Client Insights for Wealth Management code locally. In a terminal, run:
+Clone the Client Insight for Wealth Management code locally. In a terminal, run:
 
 ```
-git clone https://github.com/IBM/client-insights-wealth-management.git
-cd client-insights-wealth-management/
+git clone https://github.com/IBM/client-insight-wealth-management.git
+cd client-insight-wealth-management/
 ```
 
 ## 2. Explore the Notebook
