@@ -1,8 +1,8 @@
 # Client Insight for Wealth Management
 
-In this code pattern, we will explore the Client Insight for Wealth Management service.  This service provides a set of analytical models that help you obtain client insights for retaining clients and providing greater service. It is specifically designed to support wealth management companies and their clients. You can segment your clients based on their behavior, determine attrition propensity, and enhance client engagement and increasing retention.
+In this code pattern, we will explore the Client Insight for Wealth Management service. We will use the service to retrieve and display client data and analytics.  These analytics include attrition score, predicting life events and segmenting your clients based on their attributes. This can provide wealth management companies key insights to provide greater service and retaining clients.  In this code pattern, we walk through the service in a Jupyter Notebook to understand the calls and data retrieved from the service. Next, we display the retrieved data through a dashboard by creating a Python Flask web application using the service.
 
-When the reader has completed this code pattern, they will understand how to:
+This code pattern is designed for developers with interest in financial services or providing enhanced customer service. When the reader has completed this code pattern, they will understand how to:
 
 * Retrieve client insight through the Client Insight for Wealth Management (CIWM) service
 * Walk through Notebook to understand use of the service
@@ -11,13 +11,24 @@ When the reader has completed this code pattern, they will understand how to:
 
 # Architecture Flow
 
+<p align="center">
+  <img width="800" src="doc-images/arch.png">
+</p>
+
+
+1. The user accesses the application through a web interface to view client profile
+2. The application will retrieve client information and analytics through the Client Insight for Wealth Management service
+3. The user can walk through notebook to understand the Client Insight for Wealth Management service use case
+4. The notebook will allow user to call the Client Insight for Wealth Management service
+
+
 
 ## Included Components
-+ [Client Insight for Wealth Management](https://console.bluemix.net/docs/services/client_insight_wealth/index.html#getting_started_client_insight_wealth_short)
++ [Client Insight for Wealth Management](https://console.bluemix.net/docs/services/client_insight_wealth/index.html#getting_started_client_insight_wealth_short) Client Insight for Wealth Management service provides a set of analytical models that help you obtain client insights for use in marketing, distribution, and services provision
 
 ## Featured technologies
-+ [Jupyter Notebook](http://jupyter.org/)
-+ [Python](https://www.python.org/downloads/)
++ [Jupyter Notebook](http://jupyter.org/) An open source web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text
++ [Python](https://www.python.org/downloads/) Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 
 
 # Steps

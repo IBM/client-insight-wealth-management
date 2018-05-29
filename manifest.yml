@@ -1,6 +1,6 @@
 applications:
 - path: .
-  name: client-insights
+  name: client-insight
   memory: 128M
   random-route: true
   instances: 1
