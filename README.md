@@ -70,7 +70,14 @@ To run the application, go to the root folder and:
 
 ### Deploy to IBM Cloud
 
-Use the IBM Cloud CLI to push the app to IBM Cloud.  Login and then inside folder run:
+You can deploy the application to IBM Cloud using the ``Deploy to IBM Cloud`` button or deploy using the IBM Cloud CLI.   
+
+* Deploy the application directly on IBM Cloud using the 'Deploy to IBM Cloud' button
+
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/client-insight-wealth-management)
+
+
+* Use the IBM Cloud CLI to push the app to IBM Cloud.  Login and then inside folder run:
 
 ```
 bx push
