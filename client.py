@@ -98,7 +98,7 @@ def retrieve_relevant_life_events(customer_id):
         print('\nAn error occured getting scores')
         print('scoreGet Status Code: ' + str(scoresGet.status_code))
         print(scoresGet.text)
-        return {"error": customerGet.text, "status": customerGet.status_code}
+        return [{"error": customerGet.text, "status": customerGet.status_code}]
 
     return resp_json
 
@@ -126,7 +126,7 @@ def examine_client_segment(customer_id):
         print('An error occured getting scores')
         print('scoreGet Status Code: ' + str(scoresGet.status_code))
         print(scoresGet.text)
-        return {"error": customerGet.text, "status": customerGet.status_code}
+        return [{"error": customerGet.text, "status": customerGet.status_code}]
 
     return resp_json
 
