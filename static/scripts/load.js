@@ -2,7 +2,7 @@ var apiUrl = location.protocol + '//' + location.host + location.pathname + "api
 
 $(document).ready(function() {
 
-  $(".s-app-body").hide();
+  //$(".s-app-body").hide();
   updateCustomerIds();
 });
 
@@ -24,6 +24,7 @@ function updateCustomerIds() {
 
 $('.retrieve-customer').click(function() {
   $(".s-app-body").hide();
+  document.getElementById('s-app-body').style.display = "none";
   updateCustomer();
 });
 
@@ -62,7 +63,8 @@ function updateCustomer() {
         displayClientLifeEvents(data.clientLifeEvents, data.lifeEventsDescription);
         displayClientAttritionScore(data.clientAttritionScore, data.attritionFeaturesDescription);
         displayClientSegment(data.clientExamineSegment, data.segmentDescription, data.customerSegmentsDescription);
-        $(".s-app-body").show();
+        //$(".s-app-body").show();
+        document.getElementById('s-app-body').style.display = "block";
       }
 
     },
