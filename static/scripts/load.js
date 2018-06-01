@@ -61,8 +61,8 @@ function updateCustomer() {
         console.log(data)
         displayClientInfo(data.clientInfo);
         displayClientLifeEvents(data.clientLifeEvents, data.lifeEventsDescription);
-        displayClientAttritionScore(data.clientAttritionScore, data.attritionFeaturesDescription);
-        displayClientSegment(data.clientExamineSegment, data.segmentDescription, data.customerSegmentsDescription);
+        displayClientAttritionScore(data.clientAttritionScore, data.featuresDescription);
+        displayClientSegment(data.clientExamineSegment, data.segmentDescription, data.featuresDescription);
         //$(".s-app-body").show();
         document.getElementById('s-app-body').style.display = "block";
       }
