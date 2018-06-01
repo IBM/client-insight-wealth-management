@@ -32,12 +32,12 @@ with open('values_desc/life_events_desc.json') as json_file:
 json_file.close();
 
 #get desc for attrition features
-with open('values_desc/attrition_features_desc.json') as json_file:
+with open('values_desc/feature_desc.json') as json_file:
     attrition_features_desc = json.load(json_file)
 json_file.close();
 
 #get desc for customer segments
-with open('values_desc/customer_segments_desc.json') as json_file:
+with open('values_desc/feature_desc.json') as json_file:
     customer_segments_desc = json.load(json_file)
 json_file.close();
 
