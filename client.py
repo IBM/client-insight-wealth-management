@@ -51,7 +51,7 @@ def retrieve_basic_client_info(customer_id):
 
 ### Retrieve Client Attrition Score
 # Get the scores for a specific Customer_ID
-# Query String parameters; pageSize, page, score_code, effective_date
+# Query String parameters; pageSize, page, score_code, effective_date, forecast_horizon
 def retrieve_client_attrition_score(customer_id):
 
     resp_json = []
@@ -61,7 +61,7 @@ def retrieve_client_attrition_score(customer_id):
     print("Retrieve scores for a specific customer " + str(customer_id))
 
     while True:
-        scores_url = "customers/" + str(customer_id) + "/scores?page_size=" + str(page_size) + "&page=" + str(page) + "&score_code=ATTRITION_SURVIVAL"
+        scores_url = "customers/" + str(customer_id) + "/scores?page_size=" + str(page_size) + "&page=" + str(page) + "&score_code=ATTRITION_SURVIVAL&effective_date=2017-12-31&forecast_horizon=6"
         scoresGet = requests.get(base_url + scores_url,headers=head)
         if scoresGet.json() == [] or scoresGet.status_code != 200 : break
         page = page + 1
@@ -115,7 +115,7 @@ def examine_client_segment(customer_id):
     page_size = 500
 
     while True:
-        seg_url = "customers/" + str(customer_id) + "/scores?page_size=" + str(page_size) + "&page=" + str(page) + "&score_code=SEGMENTATION&effective_date=2017-08-01"
+        seg_url = "customers/" + str(customer_id) + "/scores?page_size=" + str(page_size) + "&page=" + str(page) + "&score_code=SEGMENTATION&effective_date=2017-12-31"
         #print("GET page " +str(page) + " from: " + base_url + seg_url, end="\r", flush=True)
         scoresGet = requests.get(base_url + seg_url,headers=head)
         if scoresGet.json() == [] or scoresGet.status_code != 200 : break
@@ -143,7 +143,7 @@ def segment_description():
     page_size = 500
 
     while True:
-        seg_url = "segments?page_size=" + str(page_size) + "&page=" + str(page) + "&score_code=SEGMENTATION&effective_date=2017-08-01"
+        seg_url = "segments?page_size=" + str(page_size) + "&page=" + str(page) + "&score_code=SEGMENTATION&effective_date=2017-12-31"
         scoresGet = requests.get(base_url + seg_url,headers=head)
         if scoresGet.json() == [] or scoresGet.status_code != 200 : break
         page = page + 1
