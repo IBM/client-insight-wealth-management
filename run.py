@@ -31,14 +31,9 @@ with open('values_desc/life_events_desc.json') as json_file:
     life_events_desc = json.load(json_file)
 json_file.close();
 
-#get desc for attrition features
+#get desc for attrition features, customer segments
 with open('values_desc/feature_desc.json') as json_file:
-    attrition_features_desc = json.load(json_file)
-json_file.close();
-
-#get desc for customer segments
-with open('values_desc/feature_desc.json') as json_file:
-    customer_segments_desc = json.load(json_file)
+    features_desc = json.load(json_file)
 json_file.close();
 
 
@@ -112,7 +107,7 @@ def retrieve():
 
 
     #create the output json
-    output = {"clientInfo": client_info_obj, "clientAttritionScore": client_attrition_score_obj, "clientLifeEvents": client_life_events, "clientExamineSegment": client_examine_segement_obj, "segmentDescription": segment_description, "customerId": inputCustomerId, "lifeEventsDescription": life_events_desc, "attritionFeaturesDescription": attrition_features_desc, "customerSegmentsDescription": customer_segments_desc}
+    output = {"clientInfo": client_info_obj, "clientAttritionScore": client_attrition_score_obj, "clientLifeEvents": client_life_events, "clientExamineSegment": client_examine_segement_obj, "segmentDescription": segment_description, "customerId": inputCustomerId, "lifeEventsDescription": life_events_desc, "featuresDescription": features_desc}
 
     #return output json
     return json.dumps(output)

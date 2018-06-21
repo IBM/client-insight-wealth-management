@@ -1,8 +1,6 @@
 var apiUrl = location.protocol + '//' + location.host + location.pathname + "api/";
 
 $(document).ready(function() {
-
-  //$(".s-app-body").hide();
   updateCustomerIds();
 });
 
@@ -23,7 +21,6 @@ function updateCustomerIds() {
 
 
 $('.retrieve-customer').click(function() {
-  $(".s-app-body").hide();
   document.getElementById('s-app-body').style.display = "none";
   updateCustomer();
 });
@@ -58,12 +55,12 @@ function updateCustomer() {
         alert(data.error);
         return;
       } else {
+        //update body
         console.log(data)
         displayClientInfo(data.clientInfo);
         displayClientLifeEvents(data.clientLifeEvents, data.lifeEventsDescription);
-        displayClientAttritionScore(data.clientAttritionScore, data.attritionFeaturesDescription);
-        displayClientSegment(data.clientExamineSegment, data.segmentDescription, data.customerSegmentsDescription);
-        //$(".s-app-body").show();
+        displayClientAttritionScore(data.clientAttritionScore, data.featuresDescription);
+        displayClientSegment(data.clientExamineSegment, data.segmentDescription, data.featuresDescription);
         document.getElementById('s-app-body').style.display = "block";
       }
 
