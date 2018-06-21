@@ -73,6 +73,9 @@ def retrieve():
         print("retreived data: " + str(inputCustomerId)  )
 
     data_array = []
+    client_info_obj = {}
+    client_attrition_score_obj = {}
+    client_examine_segement_obj = {}
 
     #get client info, returns a list with first element contatining client info
     client_info =  client.retrieve_basic_client_info(inputCustomerId)

@@ -151,32 +151,36 @@ function displayClientLifeEvents(clientLifeEvents, lifeEventsDescription) {
 function displayClientAttritionScore(clientAttritionScore, attritionFeaturesDescription) {
 
   //attrition score
-  var score = Math.round(clientAttritionScore.score_value * 100);
-  $('.attrition-score').html(function() {
-    return '<div class="s-li-icon s-li-icon-text li-icon-color-blue attrition-score" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.0">' + score + '%</div>';
-  });
+  if (clientAttritionScore.score_value) {
+    var score = Math.round(clientAttritionScore.score_value * 100);
+    $('.attrition-score').html(function() {
+      return '<div class="s-li-icon s-li-icon-text li-icon-color-blue attrition-score" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.0">' + score + '%</div>';
+    });
+  }
 
   //features
   //display features description for feature
-  var feature1 = clientAttritionScore.feature_1_column
-  var feature2 = clientAttritionScore.feature_2_column
-  var feature3 = clientAttritionScore.feature_3_column
+  if(clientAttritionScore.feature_1_column && clientAttritionScore.feature_2_column && clientAttritionScore.feature_3_column) {
+    var feature1 = clientAttritionScore.feature_1_column
+    var feature2 = clientAttritionScore.feature_2_column
+    var feature3 = clientAttritionScore.feature_3_column
 
-  for (var key in attritionFeaturesDescription) {
-    if (clientAttritionScore.feature_1_column == key) {
-      feature1 = attritionFeaturesDescription[key];
+    for (var key in attritionFeaturesDescription) {
+      if (clientAttritionScore.feature_1_column == key) {
+        feature1 = attritionFeaturesDescription[key];
+      }
+      if (clientAttritionScore.feature_2_column == key) {
+        feature2 = attritionFeaturesDescription[key];
+      }
+      if (clientAttritionScore.feature_3_column == key) {
+        feature3 = attritionFeaturesDescription[key];
+      }
     }
-    if (clientAttritionScore.feature_2_column == key) {
-      feature2 = attritionFeaturesDescription[key];
-    }
-    if (clientAttritionScore.feature_3_column == key) {
-      feature3 = attritionFeaturesDescription[key];
-    }
+
+    $('.feature').html(function() {
+      return '<li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0"></li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature1 + '</li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature2 + '</li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature3 + '</li>';
+    });
   }
-
-  $('.feature').html(function() {
-    return '<li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0"></li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature1 + '</li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature2 + '</li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature3 + '</li>';
-  });
 }
 
 function displayClientSegment(clientExamineSegment, segmentDescription, customerSegmentsDescription) {
