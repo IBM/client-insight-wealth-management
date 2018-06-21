@@ -2,6 +2,7 @@ var apiUrl = location.protocol + '//' + location.host + location.pathname + "api
 
 $(document).ready(function() {
 
+  //$(".s-app-body").hide();
   updateCustomerIds();
 });
 
@@ -22,6 +23,7 @@ function updateCustomerIds() {
 
 
 $('.retrieve-customer').click(function() {
+  $(".s-app-body").hide();
   document.getElementById('s-app-body').style.display = "none";
   updateCustomer();
 });
@@ -59,8 +61,8 @@ function updateCustomer() {
         console.log(data)
         displayClientInfo(data.clientInfo);
         displayClientLifeEvents(data.clientLifeEvents, data.lifeEventsDescription);
-        displayClientAttritionScore(data.clientAttritionScore, data.featuresDescription);
-        displayClientSegment(data.clientExamineSegment, data.segmentDescription, data.featuresDescription);
+        displayClientAttritionScore(data.clientAttritionScore, data.attritionFeaturesDescription);
+        displayClientSegment(data.clientExamineSegment, data.segmentDescription, data.customerSegmentsDescription);
         //$(".s-app-body").show();
         document.getElementById('s-app-body').style.display = "block";
       }
@@ -122,7 +124,7 @@ function displayClientLifeEvents(clientLifeEvents, lifeEventsDescription) {
   $('.life-events').html(function() {
     var str = ''
     for (var i = 0; i < clientLifeEvents.length; i++) {
-       if (clientLifeEvents[i].score_code == "LIFE_EVENT_PREDICTION"  ) {
+       if (clientLifeEvents[i].score_code == "LIFE_EVENT_PREDICT"  ) {
 
          //display life event description for event id
          var lifeEvent = clientLifeEvents[i].event_type_id
@@ -149,37 +151,32 @@ function displayClientLifeEvents(clientLifeEvents, lifeEventsDescription) {
 function displayClientAttritionScore(clientAttritionScore, attritionFeaturesDescription) {
 
   //attrition score
-  if (clientAttritionScore.score_value) {
-    var score = Math.round(clientAttritionScore.score_value * 100);
-    $('.attrition-score').html(function() {
-      return '<div class="s-li-icon s-li-icon-text li-icon-color-blue attrition-score" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.0">' + score + '%</div>';
-    });
-  }
+  var score = Math.round(clientAttritionScore.score_value * 100);
+  $('.attrition-score').html(function() {
+    return '<div class="s-li-icon s-li-icon-text li-icon-color-blue attrition-score" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.0">' + score + '%</div>';
+  });
 
   //features
   //display features description for feature
-  if (clientAttritionScore.feature_1_column && clientAttritionScore.feature_2_column && clientAttritionScore.feature_3_column) {
-    var feature1 = clientAttritionScore.feature_1_column
-    var feature2 = clientAttritionScore.feature_2_column
-    var feature3 = clientAttritionScore.feature_3_column
+  var feature1 = clientAttritionScore.feature_1_column
+  var feature2 = clientAttritionScore.feature_2_column
+  var feature3 = clientAttritionScore.feature_3_column
 
-    for (var key in attritionFeaturesDescription) {
-      if (clientAttritionScore.feature_1_column == key) {
-        feature1 = attritionFeaturesDescription[key];
-      }
-      if (clientAttritionScore.feature_2_column == key) {
-        feature2 = attritionFeaturesDescription[key];
-      }
-      if (clientAttritionScore.feature_3_column == key) {
-        feature3 = attritionFeaturesDescription[key];
-      }
+  for (var key in attritionFeaturesDescription) {
+    if (clientAttritionScore.feature_1_column == key) {
+      feature1 = attritionFeaturesDescription[key];
     }
-
-    $('.feature').html(function() {
-      return '<li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0"></li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature1 + '</li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature2 + '</li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature3 + '</li>';
-    });
+    if (clientAttritionScore.feature_2_column == key) {
+      feature2 = attritionFeaturesDescription[key];
+    }
+    if (clientAttritionScore.feature_3_column == key) {
+      feature3 = attritionFeaturesDescription[key];
+    }
   }
 
+  $('.feature').html(function() {
+    return '<li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0"></li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature1 + '</li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature2 + '</li><li class="s-li-description-list-item s-small-body feature" data-reactid=".0.1.2.2.1.0.0.0.$0/=11=2$0.0.1.0.0.0.4.$0.2.1.1.2.$0">- ' + feature3 + '</li>';
+  });
 }
 
 function displayClientSegment(clientExamineSegment, segmentDescription, customerSegmentsDescription) {

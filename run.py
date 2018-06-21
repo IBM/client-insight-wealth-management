@@ -31,9 +31,14 @@ with open('values_desc/life_events_desc.json') as json_file:
     life_events_desc = json.load(json_file)
 json_file.close();
 
-#get desc for attrition features, customer segments
+#get desc for attrition features
 with open('values_desc/feature_desc.json') as json_file:
-    features_desc = json.load(json_file)
+    attrition_features_desc = json.load(json_file)
+json_file.close();
+
+#get desc for customer segments
+with open('values_desc/feature_desc.json') as json_file:
+    customer_segments_desc = json.load(json_file)
 json_file.close();
 
 
@@ -71,7 +76,6 @@ def retrieve():
 
     #get client info, returns a list with first element contatining client info
     client_info =  client.retrieve_basic_client_info(inputCustomerId)
-    client_info_obj = {}
     if (len(client_info) > 0):
         client_info_obj = client_info[0]
         if ("error" in client_info_obj):
@@ -79,7 +83,6 @@ def retrieve():
 
     #get client_attrition_score, returns a list with first element contatining info
     client_attrition_score =  client.retrieve_client_attrition_score(inputCustomerId)
-    client_attrition_score_obj = {}
     if (len(client_attrition_score) > 0):
         client_attrition_score_obj = client_attrition_score[0]
         if ("error" in client_attrition_score_obj):
@@ -93,7 +96,6 @@ def retrieve():
 
     #get client segment, returns a list with first element contatining info
     client_examine_segement =  client.examine_client_segment(inputCustomerId)
-    client_examine_segement_obj = {}
     if (len(client_examine_segement) > 0):
         client_examine_segement_obj = client_examine_segement[0]
         if ("error" in client_examine_segement_obj):
@@ -107,7 +109,7 @@ def retrieve():
 
 
     #create the output json
-    output = {"clientInfo": client_info_obj, "clientAttritionScore": client_attrition_score_obj, "clientLifeEvents": client_life_events, "clientExamineSegment": client_examine_segement_obj, "segmentDescription": segment_description, "customerId": inputCustomerId, "lifeEventsDescription": life_events_desc, "featuresDescription": features_desc}
+    output = {"clientInfo": client_info_obj, "clientAttritionScore": client_attrition_score_obj, "clientLifeEvents": client_life_events, "clientExamineSegment": client_examine_segement_obj, "segmentDescription": segment_description, "customerId": inputCustomerId, "lifeEventsDescription": life_events_desc, "attritionFeaturesDescription": attrition_features_desc, "customerSegmentsDescription": customer_segments_desc}
 
     #return output json
     return json.dumps(output)
