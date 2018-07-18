@@ -20,13 +20,13 @@ This code pattern is designed for developers with interest in financial services
 
 
 ## Included Components
-+ [Client Insight for Wealth Management](https://console.bluemix.net/docs/services/client_insight_wealth/index.html#getting_started_client_insight_wealth_short): Client Insight for Wealth Management service provides a set of analytical models that help you obtain client insights for use in marketing, distribution, and services provision
+* [Client Insight for Wealth Management](https://console.bluemix.net/docs/services/client_insight_wealth/index.html#getting_started_client_insight_wealth_short): Client Insight for Wealth Management service provides a set of analytical models that help you obtain client insights for use in marketing, distribution, and services provision
 * [IBM Watson Studio](https://dataplatform.ibm.com): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 * [Jupyter Notebook](http://jupyter.org/): An open source web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text.
 
 
 ## Featured technologies
-+ [Python](https://www.python.org/downloads/) Python is a programming language that lets you work more quickly and integrate your systems more effectively.
+* [Python](https://www.python.org/downloads/) Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 * [JQuery](https://jquery.com): jQuery is a cross-platform JavaScript library designed to simplify the client-side
 scripting of HTML.
 
@@ -48,7 +48,7 @@ cd client-insight-wealth-management/
 
 ## 2. Explore the Notebook
 
-The notebook in the repo provides a descriptive walk through of the service and how it can guide a financial advisor with key insights about the client.  The notebook can be explored on the cloud through Watson Studio, or setup locally with Jupyter Notebook.
+The notebook in the repo provides a descriptive walk through of the service and how it can guide a financial advisor with key insights about the client.  It provides API calls to the service and displays the data returned from the service.  The notebook can be explored on the cloud through Watson Studio, or setup locally with Jupyter Notebook.
 
 ## Explore in Watson Studio
 
@@ -70,11 +70,13 @@ Follow the steps below to launch Watson Studio and open the notebook from this r
 
 ![](doc-images/create-project.png)
 
-* Once you have your project opened, you can use the `Add to Project` link to add a `Notebook` to the project.  Here we will choose the `From URL` tab to add notebook from this repository.  Prove a name and description for the notebook. And in the `Notebook URL` provide the following url. Click `Create Notebook` to open the notebook.
+* Once you have your project opened, you can use the `Add to Project` link to add a `Notebook` to the project.  Here we will choose the `From URL` tab to add notebook from this repository.  Provide a name and description for the notebook, and in the `Notebook URL` field provide the following url:
 
 ```
 https://github.com/IBM/client-insight-wealth-management/blob/master/notebook/Use%20Client%20Insights%20in%20meeting%20preparations.ipynb
 ```
+
+Click `Create Notebook` to open the notebook.
 
 ![](doc-images/create-notebook.png)
 
