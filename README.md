@@ -68,6 +68,11 @@ Follow the steps below to launch Watson Studio and open the notebook from this r
 
 * You can give your project a name and provide a description. Ensure you have a `Cloud Object Storage` which can be linked to the project for storing project assets.
 
+
+<!--p align="center">
+  <img width="800" src="doc-images/arch.png">
+</p-->
+
 ![](doc-images/create-project.png)
 
 * Once you have your project opened, you can use the `Add to Project` link to add a `Notebook` to the project.  Here we will choose the `From URL` tab to add notebook from this repository.  Prove a name and description for the notebook. And in the `Notebook URL` provide the following url. Click `Create Notebook` to open the notebook.
