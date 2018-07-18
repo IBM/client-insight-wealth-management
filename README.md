@@ -150,6 +150,14 @@ bx push
 ```
 
 
+## <h2>Learn more</h2>
+<ul>
+<li><strong>Finance Code Patterns</strong>: Enjoyed this Code Pattern? Check out our other <a href="https://developer.ibm.com/code/industries/finance/" rel="nofollow">Finance Code Patterns</a>.</li>
+<li><strong>Data Analytics Code Patterns</strong>: Enjoyed this Code Pattern? Check out our other <a href="https://developer.ibm.com/code/technologies/data-science/" rel="nofollow">Data Analytics Code Patterns</a></li>
+<li><strong>Watson Studios</strong>: Master the art of data science with IBM's <a href="https://datascience.ibm.com/" rel="nofollow">Watson Studios</a></li>
+</ul>
+
+
 # License
 
 [Apache 2.0](LICENSE)
