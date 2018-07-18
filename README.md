@@ -11,19 +11,12 @@ This code pattern is designed for developers with interest in financial services
 
 # Architecture Flow
 
-<!--p align="center">
-  <img width="800" src="doc-images/arch.png">
-</p-->
-
 ![](doc-images/arch.png)
-
-The user can access the application and the notebook to gain understanding of the Client Insight for Wealth Management service
 
 1. The user accesses the application through a web interface to view client profile
 2. The application will retrieve client information and analytics through the Client Insight for Wealth Management service
 3. The user can walk through notebook to understand the Client Insight for Wealth Management service use case
 4. The notebook will allow user to call the Client Insight for Wealth Management service and display retrieved raw data
-
 
 
 ## Included Components
