@@ -119,14 +119,29 @@ To run the application, go to the root folder and:
 
 ![](doc-images/app-scrnshot.png)
 
-### Deploy to IBM Cloud
+## Deploy Application to IBM Cloud
 
 You can deploy the application to IBM Cloud using the ``Deploy to IBM Cloud`` button or deploy using the IBM Cloud CLI.   
+
+#### Deploy to IBM Cloud button
 
 * Deploy the application directly on IBM Cloud using the ``Deploy to IBM Cloud`` button
 
 [![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/client-insight-wealth-management)
 
+#### Use IBM Cloud CLI
+
+* This will use the specifications provided in the ``manifest.yml`` file.  You can update the manifest.yml file to provide certain attribute including the url name.
+```
+applications:
+- path: .
+  name: client-insight
+  memory: 128M
+  random-route: true
+  instances: 1
+  buildpack: python_buildpack
+
+```
 
 * Use the IBM Cloud CLI to push the app to IBM Cloud.  Login and then inside folder run:
 
@@ -134,7 +149,6 @@ You can deploy the application to IBM Cloud using the ``Deploy to IBM Cloud`` bu
 bx push
 ```
 
-This will use the specifications provided in the ``manifest.yml`` file.
 
 # License
 
