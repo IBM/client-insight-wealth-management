@@ -23,7 +23,7 @@ app = Flask(__name__)
 ### Build the Client Profile
 # Feel free to try any of the following customer_ids to see different results.
 #customer_ids
-customer_ids = ['1038','5969','1020','5967']
+customer_ids = ['5363','1038','5969','1020','5967']
 
 
 #get desc for life events
@@ -72,32 +72,37 @@ def retrieve():
     client_attrition_score_obj = {}
     client_examine_segement_obj = {}
 
-    #get client info, returns a list with first element contatining client info
-    client_info =  client.retrieve_basic_client_info(inputCustomerId)
-    if (len(client_info) > 0):
-        client_info_obj = client_info[0]
-        if ("error" in client_info_obj):
-            return json.dumps({"error": client_info_obj["error"]})
+    client_profile_all = client.retrieve_entire_client_profile(inputCustomerId)
+    client_profile = client_profile_all[0]
+    if ("error" in client_profile):
+        return json.dumps({"error": client_profile["error"]})
 
-    #get client_attrition_score, returns a list with first element contatining info
-    client_attrition_score =  client.retrieve_client_attrition_score(inputCustomerId)
-    if (len(client_attrition_score) > 0):
-        client_attrition_score_obj = client_attrition_score[0]
-        if ("error" in client_attrition_score_obj):
-            return json.dumps({"error": client_attrition_score_obj["error"]})
+    #profile = json.dumps(client_profile, indent=4, sort_keys=True)
+    #print(profile)
+
+    #get client info, returns a list with first element contatining client info
+    client_info_obj = client_profile["customer"]
+    if ("error" in client_info_obj):
+        return json.dumps({"error": client_info_obj["error"]})
+
 
     #get client life events
-    client_life_events =  client.retrieve_relevant_life_events(inputCustomerId)
+    client_life_events = client_profile["event_scores"]
     if (len(client_life_events) > 0):
         if ("error" in client_life_events[0]):
             return json.dumps({"error": client_life_events["error"]})
 
-    #get client segment, returns a list with first element contatining info
-    client_examine_segement =  client.examine_client_segment(inputCustomerId)
-    if (len(client_examine_segement) > 0):
-        client_examine_segement_obj = client_examine_segement[0]
-        if ("error" in client_examine_segement_obj):
-            return json.dumps({"error": client_examine_segement["error"]})
+
+    #get client_attrition_score, returns a list with first element contatining info
+    client_attrition_scores = client_profile["scores"]
+    if (len(client_attrition_scores) > 0):
+        if ("error" in client_attrition_scores[0]):
+            return json.dumps({"error": client_attrition_scores[0]["error"]})
+        for i in range(len(client_attrition_scores)):
+            if (client_attrition_scores[i]["score_code"] == "ATTRITION" and client_attrition_scores[i]["forecast_horizon"] == 1 ):
+                client_attrition_score_obj = client_attrition_scores[i]
+            if (client_attrition_scores[i]["score_code"] == "DYNAMIC_SEGMENTATION"):
+                client_examine_segement_obj = client_attrition_scores[i]
 
     #get segment description, returns a list
     segment_description =  client.segment_description()

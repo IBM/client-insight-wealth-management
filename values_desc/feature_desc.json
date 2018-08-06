@@ -12,6 +12,8 @@
   "CUSTOMER_EDUCATION_LEVEL_index": "Education Level Index",
   "CUSTOMER_EMPLOYMENT_STATUS_index": "Employment Status Index",
   "CUSTOMER_GENDER_index": "Gender Index",
-  "CUSTOMER_MARITAL_STATUS_index": "Marital Status Index"
+  "CUSTOMER_MARITAL_STATUS_index": "Marital Status Index",
+  "CUSTOMER_AGE_RANGE": "Age Range",
+  "CUSTOMER_SUMMARY_TOTAL_AMOUNT_OF_ALL_FEES": "Total amount of all fees"
 
 }

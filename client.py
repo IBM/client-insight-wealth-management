@@ -33,6 +33,22 @@ head = {"Authorization" : api_key,
         "Content-Type" : api_context}
 
 
+### Retrieve entire profile of a specific customer
+def retrieve_entire_client_profile(customer_id):
+
+    print("Retrieve the entire profile of a specific customer " + str(customer_id))
+    customer_url = "customers/" + str(customer_id) + "/profile"
+    customerGet = requests.get(base_url + customer_url,headers=head)
+
+    if customerGet.status_code != 200:
+        print('\nAn error occured getting customer')
+        print('customerGet Status Code: ' + str(customerGet.status_code))
+        print(customerGet.text)
+
+    return customerGet.json()
+
+
+
 ### Retrieve Basic Client Information
 def retrieve_basic_client_info(customer_id):
 

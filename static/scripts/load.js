@@ -19,12 +19,25 @@ function updateCustomerIds() {
   });
 }
 
+$( ".select-customer-id" )
+  .change(function () {
+    document.getElementById('s-app-body').style.display = "none";
+    var formCustomerId = $('.choose-customer select').find(":selected").text();
 
+    if(formCustomerId != "[choose customer id]" && formCustomerId != "Loading...") {
+        updateCustomer();
+    }
+
+  })
+  .change();
+
+
+/*
 $('.retrieve-customer').click(function() {
   document.getElementById('s-app-body').style.display = "none";
   updateCustomer();
 });
-
+*/
 
 function updateCustomer() {
 
