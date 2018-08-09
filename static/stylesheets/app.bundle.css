@@ -6373,7 +6373,10 @@ button {
 }
 
 .s-header-logo, .s-header-secondary-nav-company {
-  fill: #fff
+  fill: #fff;
+  width: 3.2rem;
+  height: 3.2rem;
+  stroke-width: 0.2rem;
 }
 
 .s-header-logo {
