@@ -50,7 +50,7 @@ cd client-insight-wealth-management/
 
 The notebook in the repo provides a descriptive walk through of the service and how it can guide a financial advisor with key insights about the client.  It provides API calls to the service and displays the data returned from the service.  The notebook can be explored on the cloud through Watson Studio, or setup locally with Jupyter Notebook.
 
-## Explore in Watson Studio
+### Explore in Watson Studio
 
 Watson Studio provides all the resources to run the notebook.
 
@@ -84,7 +84,7 @@ Click `Create Notebook` to open the notebook.
 
 ![](doc-images/watson-studio-notebook.png)
 
-## Locally with Jupyter notebook
+### Locally with Jupyter notebook
 
 The notebook can be opened locally using Jupyter Notebook.  This will open the notebook in a web browser with the Python kernal to run the notebook.
 
