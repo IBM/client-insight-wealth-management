@@ -1,8 +1,8 @@
 {
     "name": "Client Insight Wealth Management",
     "description": "Create an application using Client Insight for Wealth Management service to retrieve and display client data and analytics",
-    "thumbnailURL": "blueprint/thumbnail.svg",
-    "appIconURL": "blueprint/appicon.svg",
+    "thumbnailURL": "doc-images/thumbnail.svg",
+    "appIconURL": "doc-images/appicon.svg",
     "previewURLs": [],
     "type": "WEB",
     "tags": [
