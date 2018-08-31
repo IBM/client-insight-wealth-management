@@ -14,6 +14,10 @@
   "CUSTOMER_GENDER_index": "Gender Index",
   "CUSTOMER_MARITAL_STATUS_index": "Marital Status Index",
   "CUSTOMER_AGE_RANGE": "Age Range",
-  "CUSTOMER_SUMMARY_TOTAL_AMOUNT_OF_ALL_FEES": "Total amount of all fees"
-
+  "CUSTOMER_SUMMARY_TOTAL_AMOUNT_OF_ALL_FEES": "Total amount of all fees",
+  "CUSTOMER_MARKET_GROUP_index": "Market Group Index",
+  "RECENCY": "Recency",
+  "CUSTOMER_SUMMARY_TOTAL_AMOUNT_OF_DEPOSITS_MAX": "Max Deposits",
+  "CUSTOMER_TENURE_IN_MONTHS": "Tenure in months",
+  "NUM_ACCOUNTS_WITH_INVESTMENT_OBJECTIVE_PLANNING": "Accounts with Investment Objective"
 }

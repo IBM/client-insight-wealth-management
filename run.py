@@ -99,7 +99,7 @@ def retrieve():
         if ("error" in client_attrition_scores[0]):
             return json.dumps({"error": client_attrition_scores[0]["error"]})
         for i in range(len(client_attrition_scores)):
-            if (client_attrition_scores[i]["score_code"] == "ATTRITION" and client_attrition_scores[i]["forecast_horizon"] == 1 ):
+            if (client_attrition_scores[i]["score_code"] == "ATTRITION" and client_attrition_scores[i]["model_scope_forecast_horizon"] == 1 ):
                 client_attrition_score_obj = client_attrition_scores[i]
             if (client_attrition_scores[i]["score_code"] == "DYNAMIC_SEGMENTATION"):
                 client_examine_segement_obj = client_attrition_scores[i]
