@@ -1,0 +1,44 @@
+{
+    "name": "Client Insight Wealth Management",
+    "description": "Create an application using Client Insight for Wealth Management service to retrieve and display client data and analytics",
+    "thumbnailURL": "blueprint/thumbnail.svg",
+    "appIconURL": "blueprint/appicon.svg",
+    "previewURLs": [],
+    "type": "WEB",
+    "tags": [
+        "finance"
+    ],
+    "demoURL": "http://client-insights-pattern.mybluemix.net/",
+    "checklist": [
+      {
+        "label": "Readme",
+        "link": "https://github.com/IBM/client-insight-wealth-management/blob/master/README.md"
+      }
+    ],
+    "generators": {
+        "python": [
+          "generator-starterkit-content-downloader",
+          "generator-git-starterkit-credentials-builder",
+          "generator-ibm-cloud-enablement",
+          "generator-ibm-service-enablement"
+        ]
+    },
+    "generatorOptions": {
+      "generator-git-starterkit-credentials-builder": {
+          "scope": "@arf",
+          "version": "0.x.x"
+      },
+      "generator-starterkit-content-downloader": {
+          "scope": "@arf",
+          "version": "0.x.x"
+      },
+      "generator-ibm-cloud-enablement": {
+        "version": "1.0.x"
+      },
+      "generator-ibm-service-enablement": {
+        "version": "2.0.1"
+      }
+    },
+    "requiredCapabilities": [],
+    "email": "cloud@us.ibm.com"
+}
