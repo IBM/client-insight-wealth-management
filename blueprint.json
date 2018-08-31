@@ -1,8 +1,8 @@
 {
     "name": "Client Insight Wealth Management",
     "description": "Create an application using Client Insight for Wealth Management service to retrieve and display client data and analytics",
-    "thumbnailURL": "doc-images/thumbnail.svg",
-    "appIconURL": "doc-images/appicon.svg",
+    "thumbnailURL": "https://github.com/IBM/client-insight-wealth-management/blob/master/doc-images/thumbnail.svg",
+    "appIconURL": "https://github.com/IBM/client-insight-wealth-management/blob/master/doc-images/appicon.svg",
     "previewURLs": [],
     "type": "WEB",
     "tags": [
