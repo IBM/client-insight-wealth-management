@@ -73,7 +73,7 @@ Follow the steps below to launch Watson Studio and open the notebook from this r
 * Once you have your project opened, you can use the `Add to Project` link to add a `Notebook` to the project.  Here we will choose the `From URL` tab to add notebook from this repository.  Provide a name and description for the notebook, and in the `Notebook URL` field provide the following url:
 
 ```
-https://github.com/IBM/client-insight-wealth-management/blob/master/notebook/Use%20Client%20Insights%20in%20meeting%20preparations.ipynb
+https://github.com/IBM/client-insight-wealth-management/blob/master/notebook/Leverage-Client-Insights.ipynb
 ```
 
 Click `Create Notebook` to open the notebook.
@@ -116,6 +116,7 @@ This will open the notebook in a browser. Here, walk through the notebook runnin
 
 To run the application, go to the root folder and:
 
++ Install dependencies `pip install -r requirements.txt`
 + Run `python run.py`
 + Access the running app in a browser at <http://0.0.0.0:8080/>
 
