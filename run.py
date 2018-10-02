@@ -23,7 +23,7 @@ app = Flask(__name__)
 ### Build the Client Profile
 # Feel free to try any of the following customer_ids to see different results.
 #customer_ids
-customer_ids = ['5363','1038','5969','1020','5967']
+customer_ids = ['1489','1285','1015','1725','1880']
 
 
 #get desc for life events
