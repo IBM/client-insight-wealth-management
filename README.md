@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/IBM/client-insight-wealth-management.svg?branch=master)](https://travis-ci.com/IBM/client-insight-wealth-management)
 # Client Insight for Wealth Management
 
 In this code pattern, we will explore the Client Insight for Wealth Management service. We will use the service to retrieve and display client data and analytics.  These analytics include attrition score, predicting life events and segmenting your clients based on their attributes. This can provide wealth management companies key insights to provide greater service and retaining clients.  In this code pattern, we walk through the service in a Jupyter Notebook to understand the calls and data retrieved from the service. Next, we display the retrieved data through a dashboard by creating a Python Flask web application using the service.
